@@ -1,0 +1,117 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Margin="0" Padding="0" Height="600" Width="800" WindowStyle="None" Background="#FF353333"
+        ResizeMode="CanMinimize" AllowsTransparency="True" Icon="resources/icon.ico">
+
+    <Window.Resources>
+
+    </Window.Resources>
+
+    <Grid MouseRightButtonDown="Grid_MouseRightButtonDown">
+
+
+
+        <Rectangle Fill="#FF2C2A2A" HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="800"/>
+
+        <RichTextBox x:Name="editor" HorizontalAlignment="Left" Height="545" Margin="26,48,0,0" VerticalAlignment="Top" Width="308" Background="#FF474545" BorderBrush="{x:Null}" Foreground="#FFF9F9F9" TextChanged="editor_TextChanged" KeyDown="editor_KeyDown">
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </RichTextBox.Resources>
+        </RichTextBox>
+
+        <Button Style="{StaticResource buttonHover}" Content="X" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="22" Height="24"  BorderBrush="{x:Null}" FontWeight="Bold" FontSize="14" Foreground="#FFF9F9F9" Click="Button_Click_1"/>
+
+        <Button Style="{StaticResource buttonHover}" Content="☐" HorizontalAlignment="Right" Margin="0,10,32,0" VerticalAlignment="Top" Width="22" Height="24" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="14" Foreground="#FFF9F9F9" Click="Button_Click_2"/>
+
+        <Button Style="{StaticResource buttonHover}" Content="_" HorizontalAlignment="Right" Margin="0,10,54,0" VerticalAlignment="Top" Width="22" Height="24" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="14" Foreground="#FFF9F9F9" Click="Button_Click_3" VerticalContentAlignment="Top"/>
+
+        <Button Style="{StaticResource buttonHover}" Content="File" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="29" Height="24" BorderBrush="{x:Null}" FontSize="14" Foreground="#FFF9F9F9" Click="Button_Click"/>
+
+        <Button Style="{StaticResource buttonHover}" Content="Edit" HorizontalAlignment="Left" Margin="39,10,0,0" VerticalAlignment="Top" Width="32" Height="24" BorderBrush="{x:Null}" FontSize="14" Foreground="#FFF9F9F9" Click="Button_Click_7"/>
+
+        <Button Style="{StaticResource buttonHover}" Content="Settings" HorizontalAlignment="Left" Margin="71,11,0,0" VerticalAlignment="Top" Width="57" Height="24" BorderBrush="{x:Null}" FontSize="14" Foreground="#FFF9F9F9" Click="Button_Click_8"/>
+
+        <Button Style="{StaticResource buttonHover}" BorderBrush="{x:Null}" Margin="609,10,173,565" Foreground="{x:Null}" Click="Button_Click_9">
+            <Polygon ToolTip="Run" Points="0,0 0,20, 13,10" Stroke="#F9F9F9" Fill="#F9F9F9" />
+        </Button>
+
+        <Menu x:Name="fileMenu" HorizontalAlignment="Left" Height="561" Margin="0,39,0,0" VerticalAlignment="Top" Width="128" Background="#FF1D1C1C" Visibility="Hidden">
+
+            <Button Style="{StaticResource buttonHover}" Content="Save" Width="118" HorizontalContentAlignment="Left" Background="{x:Null}" Foreground="#FFF9F9F9" BorderBrush="{x:Null}" Click="Button_Click_4"/>
+
+            <Button Style="{StaticResource buttonHover}" Content="Save as" Width="118" HorizontalContentAlignment="Left" Background="{x:Null}" Foreground="#FFF9F9F9" BorderBrush="{x:Null}" Click="Button_Click_5"/>
+
+            <Button Style="{StaticResource buttonHover}" Content="Open" Width="118" HorizontalContentAlignment="Left" Background="{x:Null}" Foreground="#FFF9F9F9" BorderBrush="{x:Null}" Click="Button_Click_6"/>
+
+        </Menu>
+
+        <Menu x:Name="settingsMenu" HorizontalAlignment="Left" Height="561" Margin="0,39,0,0" VerticalAlignment="Top" Width="128" Background="#FF1D1C1C" Visibility="Hidden">
+
+            <Button Style="{StaticResource buttonHover}" Content="Font" Width="118" HorizontalContentAlignment="Left" Background="{x:Null}" Foreground="#FFF9F9F9" BorderBrush="{x:Null}" Click="Button_Click_4" />
+
+        </Menu>
+        <StackPanel HorizontalAlignment="Left" Height="552" Margin="604,48,0,0" VerticalAlignment="Top" Width="196">
+            <Label x:Name="register0" Content="Register 0: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+            <Label Name="register1" Content="Register 1: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+            <Label Name="register2" Content="Register 2: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+            <Label Name="register3" Content="Register 3: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+            <Label Name="register4" Content="Register 4: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+            <Label Name="register5" Content="Register 5: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+            <Label Name="register6" Content="Register 6: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+            <Label Name="register7" Content="Register 7: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+            <Label Name="register8" Content="Register 8: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+            <Label Name="register9" Content="Register 9: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+            <Label Name="register10" Content="Register 10: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+            <Label Name="register11" Content="Register 11: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+            <Label Name="register12" Content="Register 12: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+            <Label Name="register13" Content="Register 13: " Foreground="#FF00A9CC" FontFamily="Lucida Sans Unicode" FontSize="16"/>
+        </StackPanel>
+        <Grid HorizontalAlignment="Left" ZIndex="-1" Height="551" Margin="0,49,0,0" VerticalAlignment="Top" Width="27">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Height="551" Margin="0,0,1,0" Panel.ZIndex="-1">
+                <Button Name="line0" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line1" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line2" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line3" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line4" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line5" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line6" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line7" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line8" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line9" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line10" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line11" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line12" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line13" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line14" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line15" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line16" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line17" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line18" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line19" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line20" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line21" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line22" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line23" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line24" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line25" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line26" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line27" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line28" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line29" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line30" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line31" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line32" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+                <Button Name="line33" Content="0" Width="26" Height="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0" Panel.ZIndex="-3" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF00A9CC"/>
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+</Window>
